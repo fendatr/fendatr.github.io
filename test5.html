@@ -6,7 +6,8 @@
 </head>
 <body bgcolor="#666"><center>
 <style type="text/css">
-a{color:blue;outline:none;text-decoration:none;}
+a{color:blue;outline:none;text-decoration:none}
+a:hover{text-decoration:underline}
 .tg{border-collapse:collapse;border-spacing:0;}
 .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:2px;overflow:hidden;word-break:normal;border-color:black;}
 .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:bold;padding:10px 5px;border-style:solid;border-width:2px;overflow:hidden;word-break:normal;border-color:black;}
@@ -29,7 +30,7 @@ textarea{font-size:92%;outline:none;background-color:#333;border:2px solid black
 <td class="tg-0lax"><input type="text" veri="3"></td>
 <td class="tg-0lax"><input type="text" veri="4"></td>
 <td class="tg-0lax"><input type="text" class="1" veri="5"> <a class="link1" href="">tık</a></td>
-<td class="tg-0lax"><input type="text" clas="1" veri="6"> <a class="fink1" href="">tık</a></td>
+<td class="tg-0lax"><input type="text" clasa="1" veri="6"> <a class="fink1" href="">tık</a></td>
 </tr>
 <tr>
 <td class="tg-0lax"><input type="text" veri="7"></td>
@@ -37,7 +38,7 @@ textarea{font-size:92%;outline:none;background-color:#333;border:2px solid black
 <td class="tg-0lax"><input type="text" veri="9"></td>
 <td class="tg-0lax"><input type="text" veri="10"></td>
 <td class="tg-0lax"><input type="text" class="2" veri="11"> <a class="link2" href="">tık</a></td>
-<td class="tg-0lax"><input type="text" clas="2" veri="12"> <a class="fink2" href="">tık</a></td>
+<td class="tg-0lax"><input type="text" clasa="2" veri="12"> <a class="fink2" href="">tık</a></td>
 </tr>
 <tr>
 <td class="tg-0lax"><input type="text" veri="13"></td>
@@ -45,7 +46,7 @@ textarea{font-size:92%;outline:none;background-color:#333;border:2px solid black
 <td class="tg-0lax"><input type="text" veri="15"></td>
 <td class="tg-0lax"><input type="text" veri="16"></td>
 <td class="tg-0lax"><input type="text" class="3" veri="17"> <a class="link3" href="">tık</a></td>
-<td class="tg-0lax"><input type="text" clas="3" veri="18"> <a class="fink3" href="">tık</a></td>
+<td class="tg-0lax"><input type="text" clasa="3" veri="18"> <a class="fink3" href="">tık</a></td>
 </tr>
 <tr>
 <td class="tg-0lax"><input type="text" veri="19"></td>
@@ -53,7 +54,7 @@ textarea{font-size:92%;outline:none;background-color:#333;border:2px solid black
 <td class="tg-0lax"><input type="text" veri="21"></td>
 <td class="tg-0lax"><input type="text" veri="22"></td>
 <td class="tg-0lax"><input type="text" class="4" veri="23"> <a class="link4" href="">tık</a></td>
-<td class="tg-0lax"><input type="text" clas="4" veri="24"> <a class="fink4" href="">tık</a></td>
+<td class="tg-0lax"><input type="text" clasa="4" veri="24"> <a class="fink4" href="">tık</a></td>
 </tr>
 <tr>
 <td class="tg-0lax"><input type="text" veri="25"></td>
@@ -61,7 +62,7 @@ textarea{font-size:92%;outline:none;background-color:#333;border:2px solid black
 <td class="tg-0lax"><input type="text" veri="27"></td>
 <td class="tg-0lax"><input type="text" veri="28"></td>
 <td class="tg-0lax"><input type="text" class="5" veri="29"> <a class="link5" href="">tık</a></td>
-<td class="tg-0lax"><input type="text" clas="5" veri="30"> <a class="fink5" href="">tık</a></td>
+<td class="tg-0lax"><input type="text" clasa="5" veri="30"> <a class="fink5" href="">tık</a></td>
 </tr>
 </table>
 
@@ -90,7 +91,7 @@ localStorage.setItem("item-" + $(this).attr("veri"), $(this).val());
 <script>
 $(document).ready(function () {
 $("*[veri]").each(function () {
-$(".fink"+$(this).attr("clas")).attr('href',localStorage.getItem("item-" + $(this).attr("veri")));
+$(".fink"+$(this).attr("clasa")).attr('href',localStorage.getItem("item-" + $(this).attr("veri")));
 });
 $("*[veri]").on("keyup", function (itm) {
 localStorage.setItem("item-" + $(this).attr("veri"), $(this).val());
