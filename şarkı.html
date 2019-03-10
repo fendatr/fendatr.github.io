@@ -24,9 +24,12 @@ TrollfesT - Espen Bin Askeladden
 
 <br><div class="asd">
 <textarea autofocus id="data"></textarea><div>
-<input type="button" value="uygula" onclick="Tcce(document.getElementById('data'))"> <button onclick="asd()">kopyala</button></div></div>
+<button onClick="silmek();">sil</button> <input type="button" value="uygula" onclick="Tcce(document.getElementById('data'))"> <button onclick="asd()">kopyala</button></div></div>
 
 <script>
+function silmek(){
+document.getElementById('data').value = "";
+};
 function Tcce(val){
 var i= 0;
 var array1 = val.value.split("\n");
