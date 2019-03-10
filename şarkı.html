@@ -1,11 +1,13 @@
 <html>
 <head>
 <title>şarkı keşif</title>
+<base target="_blank">
 <style>
 html{background-color:#333;color:white;font-size:110%}
-a{color:blue;text-decoration:none;}
-a:hover{color:blue;text-decoration:underline;}
+a{color:blue;text-decoration:none}
+a:hover{color:blue;text-decoration:underline}
 div{margin-top:5px}
+div.asd{margin-top:250px}
 textarea{font-size:8pt;outline:none;height:175px;border:2px solid black;width:95%;background-color:#777}
 .abc{outline:none;border:2px solid black;overflow:none;margin-left:30%;margin-right:30%;position:relative;bottom:-9px}
 input{outline:none;border:2px solid black}
@@ -20,9 +22,9 @@ Ensiferum - Tears
 Ensiferum - Lai lai hei
 TrollfesT - Espen Bin Askeladden
 
-<br>
+<br><div class="asd">
 <textarea autofocus id="data"></textarea><div>
-<input type="button" value="uygula" onclick="Tcce(document.getElementById('data'))"> <button onclick="asd()">kopyala</button></div>
+<input type="button" value="uygula" onclick="Tcce(document.getElementById('data'))"> <button onclick="asd()">kopyala</button></div></div>
 
 <script>
 function Tcce(val){
@@ -39,7 +41,6 @@ copyText.select();
 document.execCommand("copy");
 }
 </script>
-
 
 </center></body>
 </html>
