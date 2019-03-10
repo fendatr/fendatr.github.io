@@ -22,7 +22,7 @@ var i= 0;
 
 var array1 = val.value.split("\n");
 for ( i = 0; i < array1.length; i++) {
-    array1[i] = array1[i] + ' <a href=\"https://start.duckduckgo.com/?q=' + array1[i] + '&ia=videos\">' + array1[i] + '</a><br>';
+    array1[i] = array1[i] + ' <a href=\"https://start.duckduckgo.com/?q=' + array1[i] + '&ia=videos\">' + array1[i] + ' - ddg video</a> <a href=\"https://www.youtube.com/results?search_query=' + array1[i] + '\">' + array1[i] + ' - youtube</a><br>';
 }
 val.value = array1.join("\n");
 }
