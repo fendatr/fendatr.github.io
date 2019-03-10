@@ -5,9 +5,11 @@
 html{background-color:#333;color:white;font-size:110%}
 a{color:blue;text-decoration:none;}
 a:hover{color:blue;text-decoration:underline;}
-div{margin-top:-5px}
-textarea{font-size:8pt;outline:none;height:375px;border:2px solid black;width:95%;background-color:#777}
+div{margin-top:5px}
+textarea{font-size:8pt;outline:none;height:175px;border:2px solid black;width:95%;background-color:#777}
 .abc{outline:none;border:2px solid black;overflow:none;margin-left:30%;margin-right:30%;position:relative;bottom:-9px}
+input{outline:none;border:2px solid black}
+button{outline:none;border:2px solid black}
 </style>
 </head>
 <body><center>
@@ -19,12 +21,12 @@ Ensiferum - Lai lai hei
 TrollfesT - Espen Bin Askeladden
 
 <br>
-<textarea autofocus id="data"></textarea><br><div>
-<button class="abc" onclick="asd()">kopyala</button><br><input class="abc" type="button" value="uygula" onclick="Tcce(document.getElementById('data'))"></div>
+<textarea autofocus id="data"></textarea><div>
+<input type="button" value="uygula" onclick="Tcce(document.getElementById('data'))"> <button onclick="asd()">kopyala</button></div>
+
 <script>
 function Tcce(val){
 var i= 0;
-
 var array1 = val.value.split("\n");
 for ( i = 0; i < array1.length; i++) {
 array1[i] = array1[i] + ' <a href=\"https://start.duckduckgo.com/?q=' + array1[i] + '&ia=videos\">' + array1[i] + ' - ddg video</a> veya <a href=\"https://www.youtube.com/results?search_query=' + array1[i] + '\">' + array1[i] + ' - youtube</a><br>';
