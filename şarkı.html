@@ -5,8 +5,8 @@
 html{background-color:#333;color:white;font-size:110%}
 a{color:blue;text-decoration:none;}
 a:hover{color:blue;text-decoration:underline;}
-textarea{font-size:7pt;outline:none;height:175px;border:2px solid black;width:95%;background-color:#777}
-input{border:2px solid black;overflow:none;margin-left:30%;margin-right:30%;position:relative;bottom:-9px}
+textarea{font-size:8pt;outline:none;height:375px;border:2px solid black;width:95%;background-color:#777}
+.abc{border:2px solid black;overflow:none;margin-left:30%;margin-right:30%;position:relative;bottom:-9px}
 </style>
 </head>
 <body><center>
@@ -19,7 +19,7 @@ TrollfesT - Espen Bin Askeladden
 
 <br>
 <textarea autofocus id="data"></textarea><br>
-<input type="button" value="uygula" onclick="TextDefine(document.getElementById('data'))">
+<input class="abc" type="button" value="uygula" onclick="TextDefine(document.getElementById('data'))"><button class="abc" onclick="asd()">Copy</button>
 <script>
 function TextDefine(val){
 var i= 0;
@@ -29,6 +29,11 @@ for ( i = 0; i < array1.length; i++) {
 array1[i] = array1[i] + ' <a href=\"https://start.duckduckgo.com/?q=' + array1[i] + '&ia=videos\">' + array1[i] + ' - ddg video</a> veya <a href=\"https://www.youtube.com/results?search_query=' + array1[i] + '\">' + array1[i] + ' - youtube</a><br>';
 }
 val.value = array1.join("\n");
+}
+function asd() {
+var copyText = document.getElementById("data");
+copyText.select();
+document.execCommand("copy");
 }
 </script>
 
