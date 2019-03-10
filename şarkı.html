@@ -5,6 +5,7 @@
 html{background-color:#333;color:white;font-size:110%}
 a{color:blue;text-decoration:none;}
 a:hover{color:blue;text-decoration:underline;}
+textarea{width:95%;background-color:#777}
 </style>
 </head>
 <body><center>
@@ -16,11 +17,11 @@ Ensiferum - Lai lai hei
 TrollfesT - Espen Bin Askeladden
 
 <br>
-<textarea autofocus style="font-size:7pt;outline:none;width:500px;height:75px" name="data" id="data"></textarea><br>
-<input type="button" style="overflow:none;margin-left:30%;margin-right:30%;position:relative;bottom:-9px;" name="submit1" value="uygula" onclick="TextDefine(document.getElementById('data'))">
+<textarea autofocus style="font-size:7pt;outline:none;height:175px" id="data"></textarea><br>
+<input type="button" style="overflow:none;margin-left:30%;margin-right:30%;position:relative;bottom:-9px" value="uygula" onclick="TextDefine(document.getElementById('data'))">
 <script>
 function TextDefine(val){
-var i= 0;                
+var i= 0;
 
 var array1 = val.value.split("\n");
 for ( i = 0; i < array1.length; i++) {
