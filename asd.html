@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+.gizli{display:none}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+function update()
+{
+try
+{
+var data = "<a href=\""
++ "" + document.getElementById("hash").value
++ "\">" + document.getElementById("name").value
++ "</a>"
++ "<br>"
+;
+document.getElementById("link").href = data;
+document.getElementById("link_text").value = data;
+}
+catch(e)
+{
+alert("exception: " + e);
+}
+}
+</script>
+<div>
+<form name="form" onsubmit="update(); return false;">
+<label>url: <input required id="hash" title="asdzxc" placeholder="link" size="20"></label>
+<br>
+<label>title: <input required title="asd123" id="name" placeholder="başlık" size="20"></label>
+<input class="gizli" type="submit" value="ok">
+<br>
+<a class="gizli" href="magnet:" id="link">Magnet Link</a><input readonly id="link_text" size="40">
+<br>
+</form>
+</div>
+</body>
+</html>
