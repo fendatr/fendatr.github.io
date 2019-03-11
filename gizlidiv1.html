@@ -1,0 +1,27 @@
+<style>
+#alma{
+width:100%;
+padding:50px 0;
+text-align:center;
+background-color:lightblue;
+margin-top:20px;
+display:none
+}
+</style>
+<p>butona 2 kere tıklayınca açılır.</p>
+<button onclick="asd110()">Tık</button>
+
+<div id="alma">
+This is my DIV element.
+</div>
+
+<script>
+function asd110() {
+var x = document.getElementById("alma");
+if (x.style.display === "none") {
+x.style.display = "block";
+}else{
+x.style.display = "none";
+}
+}
+</script>
