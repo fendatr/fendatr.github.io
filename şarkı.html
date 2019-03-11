@@ -13,6 +13,13 @@ div.asd{margin-top:50px;cursor:default}
 textarea{font-size:8pt;outline:none;height:175px;border:2px solid black;width:85%;background-color:#242424;color:#bdbdbd}
 input{outline:none;border:2px solid black}
 button{outline:none;border:2px solid black}
+#alma{
+width:100%;
+padding:50px 0;
+text-align:center;
+background-color:#333;
+margin-top:20px;
+}
 </style>
 </head>
 <body><center>
@@ -32,7 +39,7 @@ Trollfest - Espen Bin Askeladden: <a href="https://start.duckduckgo.com/?q=Troll
 <a href="https://www.youtube.com/watch?v=rebuWBFfUhg">Metal Ballads Collection - YouTube</a> xxx<br>
 
 
-<div><p>keşfedilecek gruplar (related) - spotify</p>
+<div id="alma"><p>keşfedilecek gruplar (related) - spotify</p>
 <a href="https://open.spotify.com/artist/1XZXiYvvt03EcdNGCl9nnC/related">Two of a Kind</a><br>
 
 
@@ -77,6 +84,14 @@ function asd() {
 var copyText = document.getElementById("data");
 copyText.select();
 document.execCommand("copy");
+}
+function asd110() {
+var x = document.getElementById("alma");
+if (x.style.display === "none") {
+x.style.display = "block";
+}else{
+x.style.display = "none";
+}
 }
 </script>
 
