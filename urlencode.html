@@ -1,0 +1,47 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+html{background-color:#333}
+.gizli{display:none}
+.as{border:2px solid black;outline:none}
+</style>
+</head>
+<body>
+<center>
+<script type="text/javascript">
+function update()
+{
+try
+{
+var data = ""
++ "" + encodeURIComponent(document.getElementById("name").value)
++ ""
++ ""
+;
+document.getElementById("link").href = data;
+document.getElementById("link_text").value = data;
+}
+catch(e)
+{
+alert("exception: " + e);
+}
+}
+function asd(){
+var copyText = document.getElementById("link_text");
+copyText.select();
+document.execCommand("copy");
+}
+</script>
+
+<form name="form" onsubmit="update(); return false;">
+<label>url: <input class="as" title="asd123" id="name" placeholder="url" size="20"></label>
+<input class="gizli" type="submit" value="ok">
+<br>
+<a class="gizli" href="magnet:" id="link">Magnet Link</a><input class="as" readonly id="link_text" size="30">
+<br><button class="as" onclick="asd()">kopyala</button>
+</form>
+</center>
+</body>
+</html>
