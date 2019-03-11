@@ -28,6 +28,7 @@ alert("exception: " + e);
 }
 </script>
 <div>
+
 <form name="form" onsubmit="update(); return false;">
 <label>url: <input required id="hash" title="asdzxc" placeholder="link" size="20"></label>
 <br>
@@ -38,5 +39,15 @@ alert("exception: " + e);
 <br>
 </form>
 </div>
+
+<button onclick="asd()">kopyala</button>
+<script>
+function asd(){
+var copyText = document.getElementById("link_text");
+copyText.select();
+document.execCommand("copy");
+}
+</script>
+
 </body>
 </html>
