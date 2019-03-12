@@ -24,20 +24,21 @@ div.style.display = "none";
 </script>
 <style>
 html{background-color:gray}
-.buttons a{font-size:16px}
-.buttons a:hover{cursor:pointer;font-size:16px}
+.buttons a{font-size:16px;text-decoration:none}
+.buttons a:hover{cursor:pointer;font-size:16px;text-decoration:underline}
+.zx{display:none}
 </style>
 <div class="main_div">
 <div class="buttons">
-<a href="#" onclick="divVisibility('Div1');">Div1</a> | 
-<a href="#" onclick="divVisibility('Div2');">Div2</a> | 
-<a href="#" onclick="divVisibility('Div3');">Div3</a> | 
-<a href="#" onclick="divVisibility('Div4');">Div4</a>
+<a href="#" onclick="divVisibility('Div1');">Megadeth</a><br>
+<a href="#" onclick="divVisibility('Div2');">Metallica</a><br>
+<a href="#" onclick="divVisibility('Div3');">Iron Maiden</a><br>
+<a href="#" onclick="divVisibility('Div4');">Dio</a><br> 
 </div>
 <div class="inner_div">
-<div id="Div1" style="display:none;">I'm Div One</div>
-<div id="Div2" style="display:none;">I'm Div Two</div>
-<div id="Div3" style="display:none;">I'm Div Three</div>
-<div id="Div4" style="display:none;">I'm Div Four</div>
+<div id="Div1" class=zx>I'm Div One</div>
+<div id="Div2" class=zx>I'm Div Two</div>
+<div id="Div3" class=zx>I'm Div Three</div>
+<div id="Div4" class=zx>I'm Div Four</div>
 </div>
 </div>
