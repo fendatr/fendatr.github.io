@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>itorrents link generator</title>
+</head>
+<style>
+a.lol{text-decoration:none}
+a.lol:hover{text-decoration:underline}
+input.qwe{background-color:gray;outline:none;border:2px solid black}
+input{outline:none;border:2px solid black}
+</style>
+<body bgcolor="#333">
+
+<script type="text/javascript">
+function update()
+{
+try
+{
+var data = "https://itorrents.org/torrent/"
++ document.getElementById("hash").value
++ "" + document.getElementById("name").value
++ ".torrent"
+;
+document.getElementById("link").href = data;
+document.getElementById("link_text").value = data;
+}
+catch(e)
+{
+alert("exception: " + e);
+}
+}
+</script>
+
+<div><form name="form" onsubmit="update(); return false;">
+<label>hash: <input class="qwe" id="hash" size="45"></label><div style="display:none">
+<br>
+<label><input id="name" size="70"></label>
+<br></div>
+<input type="submit" value="Generate">
+<br>
+<a class="lol" href="https://itorrents.org/torrent/" id="link">Magnet Link</a>: <input readonly class="qwe" id="link_text" size="73">
+<br></form></div>
+
+</body>
+</html>
