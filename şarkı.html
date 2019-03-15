@@ -124,7 +124,7 @@ dark tranquillity - the gallery 13 mart. tek favorim lethe olarak kaldı.<br>
 
 
 <br><div class="asd">
-<div style="margin-bottom:5px"><input style="text-align:center;outline:none;width:160px;border:2px solid black;color:#00FF00;background-color:black" type="text" readonly size="14" name="elma" id="tarih"><button style="margin-left:5px;border:2px solid black" onclick="asd()">kopyala</button></div>
+<div style="margin-bottom:5px"><input style="text-align:center;outline:none;width:160px;border:2px solid black;color:#00FF00;background-color:black" type="text" readonly size="14" name="elma" id="tarih"><button style="margin-left:5px;border:2px solid black" onclick="asd()">kopyala (pano)</button> <button onclick="aax()">kopyala</button></div>
 
 <textarea id="data"></textarea><div><button class="hidden" data-txt="sil" onClick="silmek();"></button> <input type="button" value="uygula" onclick="Tcce(document.getElementById('data'))"> <button class="hidden" data-txt="kopyala" onclick="asd()"></button></div><input class="xdxd" type="button" onclick="location.href='https://github.com/fendatr/fendatr.github.io/edit/master/%C5%9Fark%C4%B1.html';" value="düzenle"> <button class="hidden" data-txt="tık" onclick="asd110()"></button></div>
 <script>
@@ -189,6 +189,12 @@ function asd() {
 var copyText = document.getElementById("tarih");
 copyText.select();
 document.execCommand("copy");
+}
+function aax()
+{
+var n1 = document.getElementById('tarih');
+var n2 = document.getElementById('data');
+n2.value = n1.value;
 }
 </script>
 
