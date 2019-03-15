@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>saat ve tarih</title>
+</head>
+<body bgcolor="gray">
+
+<script>
+var timer = setInterval( getDate, 500);
+function getDate(){
+var todaydate = new Date();
+var aa = todaydate.getHours();
+var bb = todaydate.getMinutes();
+var cc = todaydate.getSeconds();
+var dd = todaydate.getDate();
+var ee = todaydate.getMonth() + 1;
+var ff = todaydate.getFullYear();
+
+if (aa < 10) {
+  aa = '0' + aa;
+}
+if (bb < 10) {
+  bb = '0' + bb;
+}
+if (cc < 10) {
+  cc = '0' + cc;
+}
+if (dd < 10) {
+  dd = '0' + dd;
+}
+if (ee < 10) {
+  ee = '0' + ee;
+}
+
+var tarih = new Date();
+var month = new Array();
+month[00] = "ocak";
+month[01] = "şubat";
+month[02] = "mart";
+month[03] = "nisan";
+month[04] = "mayıs";
+month[05] = "haziran";
+month[06] = "temmuz";
+month[07] = "ağustos";
+month[08] = "eylül";
+month[09] = "ekim";
+month[10] = "kasım";
+month[11] = "aralık";
+var nn = month[tarih.getMonth()];
+var datestring = dd + " " + nn + " " + ff + " " + aa + ":" + bb + ":" + cc + " ";
+document.getElementById("tarih").value = datestring; 
+}
+document.getElementById("tarih").onload = getDate();
+</script>
+<input style="text-align:center;outline:none;width:160px;border:2px solid black;color:#00FF00;background-color:black" type="text" readonly size="14" id="tarih">
+</body>
+</html>
