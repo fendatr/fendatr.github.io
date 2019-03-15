@@ -124,8 +124,9 @@ dark tranquillity - the gallery 13 mart. tek favorim lethe olarak kaldı.<br>
 
 
 <br><div class="asd">
-<textarea id="data"></textarea><div>
-<button class="hidden" data-txt="sil" onClick="silmek();"></button> <input type="button" value="uygula" onclick="Tcce(document.getElementById('data'))"> <button class="hidden" data-txt="kopyala" onclick="asd()"></button></div><input class="xdxd" type="button" onclick="location.href='https://github.com/fendatr/fendatr.github.io/edit/master/%C5%9Fark%C4%B1.html';" value="düzenle"> <button class="hidden" data-txt="tık" onclick="asd110()"></button></div>
+<div style="margin-bottom:5px"><input style="text-align:center;outline:none;width:160px;border:2px solid black;color:#00FF00;background-color:black" type="text" readonly size="14" name="elma" id="tarih"><button style="margin-left:5px;border:2px solid black" onclick="asd()">kopyala</button></div>
+
+<textarea id="data"></textarea><div><button class="hidden" data-txt="sil" onClick="silmek();"></button> <input type="button" value="uygula" onclick="Tcce(document.getElementById('data'))"> <button class="hidden" data-txt="kopyala" onclick="asd()"></button></div><input class="xdxd" type="button" onclick="location.href='https://github.com/fendatr/fendatr.github.io/edit/master/%C5%9Fark%C4%B1.html';" value="düzenle"> <button class="hidden" data-txt="tık" onclick="asd110()"></button></div>
 <script>
 function silmek(){
 document.getElementById('data').value = "";
@@ -150,6 +151,44 @@ x.style.display = "block";
 }else{
 x.style.display = "none";
 }
+}
+</script>
+
+<script>
+var timer = setInterval( getDate, 500);
+function getDate(){
+var todaydate = new Date();
+var aa = todaydate.getHours();
+var bb = todaydate.getMinutes();
+var cc = todaydate.getSeconds();
+var dd = todaydate.getDate();
+var ee = todaydate.getMonth() + 1;
+var ff = todaydate.getFullYear();
+
+if (aa < 10) {
+  aa = '0' + aa;
+}
+if (bb < 10) {
+  bb = '0' + bb;
+}
+if (cc < 10) {
+  cc = '0' + cc;
+}
+if (dd < 10) {
+  dd = '0' + dd;
+}
+if (ee < 10) {
+  ee = '0' + ee;
+}
+
+var datestring = dd + "." + ee + "." + ff + " " + aa + ":" + bb + ":" + cc;
+document.getElementById("tarih").value = datestring; 
+}
+document.getElementById("tarih").onload = getDate();
+function asd() {
+var copyText = document.getElementById("tarih");
+copyText.select();
+document.execCommand("copy");
 }
 </script>
 
