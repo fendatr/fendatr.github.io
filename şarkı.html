@@ -181,7 +181,7 @@ if (ee < 10) {
   ee = '0' + ee;
 }
 
-var datestring = dd + "." + ee + "." + ff + " " + aa + ":" + bb + ":" + cc;
+var datestring = dd + "." + ee + "." + ff + " " + aa + ":" + bb + ":" + cc + " ";
 document.getElementById("tarih").value = datestring; 
 }
 document.getElementById("tarih").onload = getDate();
@@ -189,12 +189,14 @@ function asd() {
 var copyText = document.getElementById("tarih");
 copyText.select();
 document.execCommand("copy");
+document.getElementById("data").focus();
 }
 function aax()
 {
 var n1 = document.getElementById('tarih');
 var n2 = document.getElementById('data');
 n2.value = n1.value;
+document.getElementById("data").focus();
 }
 </script>
 
