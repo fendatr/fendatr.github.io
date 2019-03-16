@@ -1,0 +1,50 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+html{background-color:#333}
+.gizli{display:none}
+.as{border:2px solid black;outline:none;}
+</style>
+</head>
+<body>
+<center>
+<script type="text/javascript">
+function update()
+{
+try
+{
+var data = "<a href=\""
++ "" + document.getElementById("hash").value
++ "\">" + document.getElementById("name").value
++ "</a>"
++ "<br>"
+;
+document.getElementById("link").href = data;
+document.getElementById("link_text").value = data;
+}
+catch(e)
+{
+alert("exception: " + e);
+}
+}
+function asd(){
+var copyText = document.getElementById("link_text");
+copyText.select();
+document.execCommand("copy");
+}
+</script>
+
+<form name="form" onsubmit="update(); return false;">
+<label>url: <input autofocus onchange="update(); return false;" class="as" required id="hash" title="asdzxc" placeholder="link" size="20"></label>
+<br>
+<label>title: <input onchange="update(); return false;" class="as" title="asd123" id="name" placeholder="başlık" size="20"></label>
+<input class="gizli" type="submit" value="ok">
+<br>
+<a class="gizli" href="magnet:" id="link">Magnet Link</a><input class="as" readonly id="link_text" size="30">
+<br><button class="as" onclick="asd()">kopyala</button>
+</form>
+</center>
+</body>
+</html>
