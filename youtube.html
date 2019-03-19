@@ -1,7 +1,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Link Generator</title>
+<title>Youtube downloader</title>
 <style>
 html{background-color:#333}
 </style>
@@ -16,19 +16,18 @@ var data = "http://convertmp3.io/download/?video="
 + "" + document.getElementById("hash").value
 ;
 document.getElementById("link").href = data;
-document.getElementById("link_text").value = data;
 }
 catch(e)
 {
 alert("exception: " + e);
 }
 }
-</script>
-<div>
+</script><center>
+<div style="margin-top:40%">
 <form name="form" onkeyup="update(); return false;">
 <label>Youtube URL: <input autofocus id="hash" size="40"></label>
-<br><center>
-<a href="http://convertmp3.io/download/?video=" id="link">indir</a><input hidden readonly id="link_text" size="80">
+<br>
+<a href="http://convertmp3.io/download/?video=" id="link">indir</a>
 <br>
 </form>
 </div>
