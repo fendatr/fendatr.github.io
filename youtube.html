@@ -2,6 +2,9 @@
 <head>
 <meta charset="utf-8">
 <title>Link Generator</title>
+<style>
+html{background-color:#333}
+</style>
 </head>
 <body>
 <script>
@@ -23,13 +26,9 @@ alert("exception: " + e);
 </script>
 <div>
 <form name="form" onkeyup="update(); return false;">
-<label>Youtube URL: <input id="hash" size=40></label>
-<br><div style="display:none">
-<label><input id="name" size=80></label>
-<br>
-<input type="submit" value="Generate">
-<br></div><center>
-<a href="http://convertmp3.io/download/?video=" id="link">indir</a><input hidden readonly id="link_text" size=80>
+<label>Youtube URL: <input autofocus id="hash" size="40"></label>
+<br><center>
+<a href="http://convertmp3.io/download/?video=" id="link">indir</a><input hidden readonly id="link_text" size="80">
 <br>
 </form>
 </div>
