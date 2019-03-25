@@ -1,0 +1,71 @@
+<html>
+<head>
+<style>
+#asd1, #asd2, #asd3{display:none}
+button{border:2px solid black;outline:none}
+</style>
+<script>
+function myFunction(id)
+{
+var style="";
+var array=["asd1","asd2","asd3"]
+if (id=="all")
+{
+for(var i=0;i<array.length;i++)
+{
+var element=document.getElementById(array[i]);
+style=getComputedStyle(element, null).display;
+element.style.display=changeme(style);
+}
+}else{
+var element=document.getElementById(id);
+style=getComputedStyle(element, null).display;
+element.style.display=changeme(style);
+// alert(id);
+}
+}
+function changeme(style)
+{
+if (style=='none') return "block";
+if (style=='block') return "none";
+}
+</script>
+
+</head>
+
+<body bgcolor="gray">
+<center>
+
+
+<button onclick="myFunction('all')">tümünü aç/kapat</button><br><br>
+
+sevdiğim meyve:
+<button onclick="myFunction('asd1')">aç/kapat</button>
+<div id="asd1">
+elma<br>
+armut<br>
+karpuz<br>
+</div><br>
+
+sevdiğim sebze:
+<button onclick="myFunction('asd2')">aç/kapat</button>
+<div id="asd2">
+pırasa<br>
+ıspanak<br>
+kereviz<br>
+</div><br>
+
+sevdiğim şehir:
+<button onclick="myFunction('asd3')">aç/kapat</button>
+<div id="asd3">
+istanbul<br>
+ankara<br>
+bursa<br>
+edirne<br>
+izmir<br>
+</div>
+
+
+</center>
+</body>
+</html>
